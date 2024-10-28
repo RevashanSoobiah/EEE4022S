@@ -1,0 +1,32 @@
+% Full path to the CSV file
+filePath = 'D:\MotorNR\Healthy\Calibration\scope_1.csv';
+
+
+% Load your CSV data
+data = readtable('D:\MotorNR\Healthy\InnerAxial&Calibration\scope_0.csv');
+
+% Assume the columns are named Var1, Var2, Var3
+
+time = data(1);       % First column
+amplitude1 = data(2);  % Second column
+%amplitude2 = data.Var3;  % Third column
+
+% Plotting the first and second columns
+figure;
+
+subplot(2, 2, 1);
+plot(time, amplitude1);
+title('Time Domain Signal: Column 1 vs Column 2');
+xlabel('Time (s)');
+ylabel('Amplitude (Column 2)');
+grid on;
+
+
+% Plotting the first and third columns
+%subplot(2, 2, 3);
+%plot(time, amplitude2);
+%title('Time Domain Signal: Column 1 vs Column 3');
+%xlabel('Time (s)');
+%ylabel('Amplitude (Column 3)');
+%grid on;
+%}
